@@ -31,19 +31,26 @@ $ a \cdot b = \displaystyle \sum_{x} (a_x b_x) x $
 
 ### 例：フーリエ変換
 $X = (Z_m, +, 0)$ に対して、
+
 $a + b = \mathrm{idft}(\mathrm{dft}(a) + \mathrm{dft}(b)) $
+
 $a * b = \mathrm{idft}(\mathrm{dft}(a) \cdot \mathrm{dft}(b)) $
+
 であることがよく知られている（巡回畳み込み）
 
 注意：競技プログラミングにおいては十分大きな $m$ を取ることで巡回を考慮しないようにしていることが多いが、後述する xor 畳み込みのように巡回性を利用する場合もある。
 
 ### 例：累積和と階差
 $X_\max = (Z_{\geq 0}, \max, 0) $, $ f(a) = \displaystyle \sum_x \left (\sum_{y \leq x} a_y \right) x $ とすると
+
 $a + b = f^{-1}(f(a) + f(b)) $
+
 $a * b = f^{-1}(f(a) \cdot f(b)) $
 
 また、$X_\min = (Z_{\geq 0}, \min, \infty) $, $ g(a) = \displaystyle \sum_x \left (\sum_{y \geq x} a_y \right) x $ とすると
+
 $a + b = g^{-1}(g(a) + g(b)) $
+
 $a * b = g^{-1}(g(a) \cdot g(b)) $
 
 ## モノイド環の直積とその上の演算
