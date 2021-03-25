@@ -1,23 +1,12 @@
-name: verify
+name: Build and deploy Jekyll site to GitHub Pages
 
 on: push
 
 jobs:
-  verify:
-    runs-on: ubuntu-latest
-
+  github-pages:
+    runs-on: ubuntu-16.04
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Set up Python
-      uses: actions/setup-python@v1
-
-    - name: Install dependencies
-      run: pip3 install -U online-judge-verify-helper
-
-    - name: Run tests
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        YUKICODER_TOKEN: ${{ secrets.YUKICODER_TOKEN }}
-        GH_PAT: ${{ secrets.GH_PAT }}
-      run: oj-verify all
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@2.0.1
+        env:
+          JEKYLL_PAT: ${{ secrets.GH_PAT }}
