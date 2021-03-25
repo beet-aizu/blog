@@ -1,6 +1,6 @@
 ---
 title: モノイドまとめ
-documentation_of: //docs/blog/monoid.test.cpp
+documentation_of: //monoid.test.cpp
 ---
 
 ## 有名なやつ
