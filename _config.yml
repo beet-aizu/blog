@@ -1,3 +1,4 @@
 # _config.yml
 
 title: "beet's soil"
+theme: jekyll-theme-minimal
