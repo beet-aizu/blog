@@ -1,5 +1,6 @@
 ---
 title: Top
+layout: toppage
 ---
 
 ## Table of contents

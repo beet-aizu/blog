@@ -1,5 +1,6 @@
 ---
 title: モノイドまとめ
+layout: document
 ---
 
 ## 有名なやつ
