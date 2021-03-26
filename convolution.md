@@ -41,13 +41,13 @@ $a * b = \mathrm{idft}(\mathrm{dft}(a) \cdot \mathrm{dft}(b)) $
 注意：競技プログラミングにおいては十分大きな $m$ を取ることで巡回を考慮しないようにしていることが多いが、後述する xor 畳み込みのように巡回性を利用する場合もある
 
 ### 例：累積和と階差
-$X_\max = (\mathbb{Z}_{\geq 0}, \max, 0) $, $ f(a) = \displaystyle \sum_x \left (\sum_{y \leq x} a_y \right) x $ とすると
+$X _ \max = (\mathbb{Z} _ {\geq 0}, \max, 0) $, $ f(a) = \displaystyle \sum_x \left (\sum _ {y \leq x} a_y \right) x $ とすると
 
 $a + b = f^{-1}(f(a) + f(b)) $
 
 $a * b = f^{-1}(f(a) \cdot f(b)) $
 
-また、$X_\min = (\mathbb{Z}_{\geq 0}, \min, \infty) $, $ g(a) = \displaystyle \sum_x \left (\sum_{y \geq x} a_y \right) x $ とすると
+また、$X _ \min = (\mathbb{Z}_{\geq 0}, \min, \infty) $, $ g(a) = \displaystyle \sum_x \left (\sum _ {y \geq x} a_y \right) x $ とすると
 
 $a + b = g^{-1}(g(a) + g(b)) $
 
@@ -102,7 +102,7 @@ $ (\mathbb{Z}_{2^n}, \&, \sim 0) \cong (\mathbb{Z}_2, \min, 1)^n $ より、（�
 ### gcd 畳み込み
 gcd 畳み込みは $ X = (\mathbb{Z}_{\geq 0}, \gcd, 0) $ の場合と解釈できる
 
-$ (\mathbb{Z}_{\geq 0}, \gcd, 0) \cong \displaystyle \prod_{p} (\mathbb{Z}_{\geq 0}, \min, \infty) $ より、（降順の）累積和による変換を素数ごとに適用すればよい
+$ (\mathbb{Z} _ {\geq 0}, \gcd, 0) \cong \displaystyle \prod _ {p} (\mathbb{Z} _ {\geq 0}, \min, \infty) $ より、（降順の）累積和による変換を素数ごとに適用すればよい
 
 ## 問題例
 - https://codeforces.com/gym/102441/problem/E
