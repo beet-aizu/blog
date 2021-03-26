@@ -18,7 +18,7 @@ $a \in R[X]$ に対して、$x \in X$ の係数を $a_x \in R$ と書く
 積：$ a * b = \displaystyle \sum_{xy = z} (a_x b_y) z $
 
 ### 例：多項式環
-$X = (Z_{\geq 0}, +, 0) $ とすると、これは多項式環になる
+$X = (\mathbb{Z}_{\geq 0}, +, 0) $ とすると、これは多項式環になる
 
 ## 点ごとの積
 モノイド環の点ごとの積を以下で定める
@@ -30,7 +30,7 @@ $ a \cdot b = \displaystyle \sum_{x} (a_x b_x) x $
 モノイド環において、畳み込みを点ごとの積に移すような操作（環同型写像）を考える
 
 ### 例：離散フーリエ変換
-$X = (Z_m, +, 0)$ に対して、
+$X = (\mathbb{Z}_m, +, 0)$ に対して、
 
 $a + b = \mathrm{idft}(\mathrm{dft}(a) + \mathrm{dft}(b)) $
 
@@ -41,13 +41,13 @@ $a * b = \mathrm{idft}(\mathrm{dft}(a) \cdot \mathrm{dft}(b)) $
 注意：競技プログラミングにおいては十分大きな $m$ を取ることで巡回を考慮しないようにしていることが多いが、後述する xor 畳み込みのように巡回性を利用する場合もある。
 
 ### 例：累積和と階差
-$X_\max = (Z_{\geq 0}, \max, 0) $, $ f(a) = \displaystyle \sum_x \left (\sum_{y \leq x} a_y \right) x $ とすると
+$X_\max = (\mathbb{Z}_{\geq 0}, \max, 0) $, $ f(a) = \displaystyle \sum_x \left (\sum_{y \leq x} a_y \right) x $ とすると
 
 $a + b = f^{-1}(f(a) + f(b)) $
 
 $a * b = f^{-1}(f(a) \cdot f(b)) $
 
-また、$X_\min = (Z_{\geq 0}, \min, \infty) $, $ g(a) = \displaystyle \sum_x \left (\sum_{y \geq x} a_y \right) x $ とすると
+また、$X_\min = (\mathbb{Z}_{\geq 0}, \min, \infty) $, $ g(a) = \displaystyle \sum_x \left (\sum_{y \geq x} a_y \right) x $ とすると
 
 $a + b = g^{-1}(g(a) + g(b)) $
 
@@ -84,24 +84,24 @@ $3$ 次元以上の場合においても、帰納法を用いて同様に構成�
 
 ## 応用
 ### xor 畳み込み
-$n$ bit の xor 畳み込みは $ X = (Z_{2^n}, \oplus, 0) $ の場合と解釈できる
+$n$ bit の xor 畳み込みは $ X = (\mathbb{Z}_{2^n}, \oplus, 0) $ の場合と解釈できる
 
-$ (Z_{2^n}, \oplus, 0) \cong (Z_2, +, 0)^n $ より、サイズ $2$ の DFT を $n$ 次元に渡って適用すればよい
+$ (\mathbb{Z}_{2^n}, \oplus, 0) \cong (\mathbb{Z}_2, +, 0)^n $ より、サイズ $2$ の DFT を $n$ 次元に渡って適用すればよい
 
 ### or 畳み込み
-$n$ bit の or 畳み込みは $ X = (Z_{2^n}, \|, 0) $ の場合と解釈できる
+$n$ bit の or 畳み込みは $ X = (\mathbb{Z}_{2^n}, \|, 0) $ の場合と解釈できる
 
-$ (Z_{2^n}, \|, 0) \cong (Z_2, \max, 0)^n $ より、（昇順の）累積和による変換を $n$ 次元に渡って適用すればよい
+$ (\mathbb{Z}_{2^n}, \|, 0) \cong (\mathbb{Z}_2, \max, 0)^n $ より、（昇順の）累積和による変換を $n$ 次元に渡って適用すればよい
 
 ### and 畳み込み
-$n$ bit の and 畳み込みは $ X = (Z_{2^n}, \&, \sim 0) $ の場合と解釈できる
+$n$ bit の and 畳み込みは $ X = (\mathbb{Z}_{2^n}, \&, \sim 0) $ の場合と解釈できる
 
-$ (Z_{2^n}, \&, \sim 0) \cong (Z_2, \min, 1)^n $ より、（降順の）累積和による変換を $n$ 次元に渡って適用すればよい
+$ (\mathbb{Z}_{2^n}, \&, \sim 0) \cong (\mathbb{Z}_2, \min, 1)^n $ より、（降順の）累積和による変換を $n$ 次元に渡って適用すればよい
 
 ### gcd 畳み込み
-gcd 畳み込みは $ X = (Z_{\geq 0}, \gcd, 0) $ の場合と解釈できる
+gcd 畳み込みは $ X = (\mathbb{Z}_{\geq 0}, \gcd, 0) $ の場合と解釈できる
 
-$ (Z_{\geq 0}, \gcd, 0) \cong \displaystyle \prod_{p} (Z_{\geq 0}, \min, \infty) $ より、（降順の）累積和による変換を素数ごとに適用すればよい
+$ (\mathbb{Z}_{\geq 0}, \gcd, 0) \cong \displaystyle \prod_{p} (\mathbb{Z}_{\geq 0}, \min, \infty) $ より、（降順の）累積和による変換を素数ごとに適用すればよい
 
 ## 問題例
 - https://codeforces.com/gym/102441/problem/E
