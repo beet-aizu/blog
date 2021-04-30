@@ -12,7 +12,6 @@ $ \displaystyle \max_{0 \le a,b,p} \sum_e l_e a_e - \sum_e u_e b_e - \sum_v g_v 
 s.t.
 
 - $ a_e - b_e + p_v - p_u \le w_{uv} $
-
 - $ (\sum_v g_v) = 0 $
 
 イメージ的には
@@ -34,14 +33,12 @@ $ \displaystyle \min_{0 \le f} \sum_e w_e f_e $
 s.t.
 
 - $f_e \ge l_e $
-
 - $  -f_e \ge -u_e $
-
 - $\displaystyle \sum_{e \in \mathrm{in}(v)} f_e - \sum_{e \in \mathrm{out}(v)} f_e = -g_v $
 
 制約の上二つの式をまとめて書くと、$ l_e \le f_e \le u_e $ となる
 
-つまり、$l$ が最小流量制約を、$ u $ が最大流量制約を表す。
+つまり、$l$ が最小流量制約を、$ u $ が最大流量制約を表す
 
 また、$ g_v $ はその頂点からどれだけフローが湧き出るかを表す
 
