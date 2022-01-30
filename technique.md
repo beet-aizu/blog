@@ -120,6 +120,10 @@ layout: document
 * 高度合成数
   [https://web.archive.org/web/20210731133024/https://www.firiex.com/dokuwiki/%E7%AB%B6%E3%83%97%E3%83%AD/%E9%AB%98%E5%BA%A6%E5%90%88%E6%88%90%E6%95%B0:title]
   * $10^{12}$ 程度なら $d^{2}$ が間に合う
+* 以上／未満で二値に分類
+    * [D - Median Pyramid Hard](https://atcoder.jp/contests/agc006/tasks/agc006_d)
+    * [G - Range Sort Query](https://atcoder.jp/contests/abc237/tasks/abc237_g)
+
 
 ### 定数倍改善
 * setのlower_boundは遅いので変更がないならvectorを使う
